@@ -1,96 +1,11 @@
+import { ArrowUpRight, Database, LineChart, Users } from 'lucide-react'
+
+const projects = [
+  { number: '01', title: 'Retail Sales Intelligence', type: 'Power BI dashboard', metric: '500K+', metricLabel: 'transactions analyzed', description: 'Built an interactive retail dashboard to reveal revenue trends, product performance, regional demand, and customer behavior across a large transactional dataset.', tags: ['Power BI', 'Excel', 'Data cleaning'], icon: LineChart, tone: 'bg-accent' },
+  { number: '02', title: 'Customer Churn Prediction', type: 'Machine learning model', metric: '0.87', metricLabel: 'model accuracy', description: 'Developed a classification model to identify customers at risk of churn, translating model outputs into retention-focused business recommendations.', tags: ['Python', 'Pandas', 'Scikit-learn'], icon: Users, tone: 'bg-secondary' },
+  { number: '03', title: 'Data Foundations', type: 'SQL analysis toolkit', metric: '100%', metricLabel: 'query-first thinking', description: 'Designed reusable SQL queries and analysis workflows that turn raw tables into reliable metrics for reporting and better decisions.', tags: ['SQL', 'MySQL', 'Analytics'], icon: Database, tone: 'bg-muted' },
+]
+
 export default function Projects() {
-  const projects = [
-    {
-      title: 'BookWorm',
-      subtitle: 'Full-Stack React Native App',
-      date: 'Jan 2024 – Present',
-      description: 'Built a full-stack React Native application enabling users to browse, manage, and track books with authentication and real-time data handling.',
-      tags: ['React Native', 'Node.js', 'Express', 'MongoDB', 'JWT Auth'],
-      bgColor: 'bg-[#a8e6d9]',
-      link: 'https://github.com/dhimanaayush960/bookworm',
-    },
-    {
-      title: 'Emotion Based Website',
-      subtitle: 'Mood-Based Interactive Web App',
-      date: 'Feb 2025',
-      description: 'Developed an interactive web application that adapts UI themes and music playback based on user mood.',
-      tags: ['React', 'UI/UX', 'Interactive Design'],
-      bgColor: 'bg-[#ffd670]',
-      link: 'https://emotiontune.vercel.app/',
-    },
-    {
-      title: 'PG Life',
-      subtitle: 'Best PG\'s in Haridwar',
-      date: 'Jun 2024 – Aug 2024',
-      description: 'Built a PG accommodation search platform with secure authentication and structured listings.',
-      tags: ['MERN', 'MySQL', 'Location-based Search'],
-      bgColor: 'bg-[#d9c8ff]',
-      link: 'https://aayushdhiman98.github.io/PG-Life-project/',
-    },
-  ];
-
-  return (
-    <section id="projects" className="bg-[#f5f3f0] py-16 md:py-24 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Section header */}
-        <div className="border-4 border-black bg-[#ffb3ba] p-6 mb-12 shadow-[4px_4px_0px_rgba(26,26,26,0.8)]">
-          <h2 className="text-4xl md:text-5xl font-black uppercase text-black">
-            Featured Projects
-          </h2>
-        </div>
-
-        {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`${project.bgColor} border-4 border-black p-6 shadow-[4px_4px_0px_rgba(26,26,26,0.8)] transition-all hover:translate-x-1 hover:translate-y-1`}
-            >
-              <div className="space-y-4">
-                {/* Date badge */}
-                <div className="border-2 border-black bg-white px-3 py-1 w-fit">
-                  <span className="text-xs font-bold uppercase">{project.date}</span>
-                </div>
-
-                {/* Title */}
-                <div>
-                  <h3 className="text-2xl font-black uppercase text-black">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm font-bold text-gray-800 mt-1">{project.subtitle}</p>
-                </div>
-
-                {/* Description */}
-                <p className="text-sm text-gray-700 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <div
-                      key={tagIndex}
-                      className="border-2 border-black bg-white px-2 py-1"
-                    >
-                      <span className="text-xs font-bold uppercase">{tag}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* CTA */}
-                <a 
-                  href={project.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-full px-6 py-3 font-bold uppercase text-sm border-4 border-black bg-black text-white transition-all active:translate-x-1 active:translate-y-1 cursor-pointer mt-4 block text-center hover:bg-gray-800"
-                >
-                  View Project
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return <section id="work" className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32"><div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Selected work / 02</p><h2 className="mt-4 max-w-2xl text-balance font-serif text-5xl leading-none tracking-[-0.04em] text-primary md:text-7xl">Analysis that<br /><em className="text-accent">moves</em> people.</h2></div><p className="max-w-xs text-sm leading-6 text-muted-foreground">A selection of projects where messy information became a useful point of view.</p></div><div className="grid gap-5 lg:grid-cols-3">{projects.map((project) => { const Icon = project.icon; return <article key={project.number} className="group flex min-h-[440px] flex-col rounded-2xl border border-border bg-card p-6 transition-transform hover:-translate-y-2"><div className="flex items-center justify-between font-mono text-xs text-muted-foreground"><span>{project.number}</span><Icon className="size-5 text-accent" /></div><div className={`mt-10 flex size-16 items-center justify-center rounded-full ${project.tone} text-primary`}><Icon className="size-7" /></div><p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-accent">{project.type}</p><h3 className="mt-3 text-2xl font-semibold leading-tight text-primary">{project.title}</h3><p className="mt-4 text-sm leading-6 text-muted-foreground">{project.description}</p><div className="mt-auto border-t border-border pt-5"><div className="flex items-end justify-between"><div><p className="text-3xl font-semibold text-primary">{project.metric}</p><p className="mt-1 font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground">{project.metricLabel}</p></div><ArrowUpRight className="size-5 text-accent transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></div><div className="mt-5 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="rounded-full border border-border px-3 py-1 font-mono text-[10px] text-muted-foreground">{tag}</span>)}</div></div></article> })}</div></section>
 }

@@ -1,78 +1,9 @@
+const groups = [
+  { label: 'Analytics', items: ['Power BI', 'Microsoft Excel', 'Data visualization', 'Statistical analysis'] },
+  { label: 'Programming', items: ['Python', 'SQL', 'C / C++', 'Pandas & NumPy'] },
+  { label: 'Workflow', items: ['Data cleaning', 'Critical thinking', 'Problem solving', 'Communication'] },
+]
+
 export default function Skills() {
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      skills: ['JavaScript', 'React.js', 'React Native', 'Tailwind CSS', 'Figma'],
-      bgColor: 'bg-[#a8e6d9]',
-    },
-    {
-      title: 'Backend',
-      skills: ['Node.js', 'Express', 'MongoDB', 'MySQL', 'JWT Auth'],
-      bgColor: 'bg-[#ffd670]',
-    },
-    {
-      title: 'Tools & Languages',
-      skills: ['Git & GitHub', 'C', 'C++', 'Python', 'REST APIs'],
-      bgColor: 'bg-[#d9c8ff]',
-    },
-  ];
-
-  return (
-    <section className="bg-white py-16 md:py-24 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Section header */}
-        <div className="border-4 border-black bg-[#ffb3ba] p-6 mb-12 shadow-[4px_4px_0px_rgba(26,26,26,0.8)]">
-          <h2 className="text-4xl md:text-5xl font-black uppercase text-black">
-            Technical Skills
-          </h2>
-        </div>
-
-        {/* Skills grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className={`${category.bgColor} border-4 border-black p-8 shadow-[4px_4px_0px_rgba(26,26,26,0.8)]`}
-            >
-              <h3 className="text-2xl font-black uppercase text-black mb-6">
-                {category.title}
-              </h3>
-              <div className="space-y-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skillIndex}
-                    className="border-2 border-black bg-white px-4 py-2 flex items-center"
-                  >
-                    <div className="w-2 h-2 bg-black mr-3"></div>
-                    <span className="font-bold text-black">{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Experience highlight */}
-        <div className="border-4 border-black bg-[#bae1ff] p-8 shadow-[4px_4px_0px_rgba(26,26,26,0.8)]">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border-r-4 border-black pr-8">
-              <div className="text-4xl font-black text-black mb-2">3+</div>
-              <div className="text-sm font-bold uppercase text-black">Projects Completed</div>
-              <p className="text-xs text-gray-700 mt-2">Full-stack and mobile applications</p>
-            </div>
-            <div className="border-r-4 border-black pr-8">
-              <div className="text-4xl font-black text-black mb-2">1+</div>
-              <div className="text-sm font-bold uppercase text-black">Years Experience</div>
-              <p className="text-xs text-gray-700 mt-2">Hands-on development</p>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-black mb-2">5</div>
-              <div className="text-sm font-bold uppercase text-black">Tech Skills Areas</div>
-              <p className="text-xs text-gray-700 mt-2">Frontend, Backend, Mobile, DB, UI/UX</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+  return <section id="about" className="border-y border-border bg-card"><div className="mx-auto grid max-w-7xl gap-14 px-6 py-24 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-32"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Capabilities / 03</p><h2 className="mt-4 text-balance font-serif text-5xl leading-none tracking-[-0.04em] text-primary md:text-7xl">The tools<br />behind the<br /><em className="text-accent">thinking.</em></h2></div><div className="grid gap-10 sm:grid-cols-3">{groups.map((group) => <div key={group.label}><h3 className="border-b border-accent pb-4 font-mono text-xs uppercase tracking-[0.18em] text-primary">{group.label}</h3><ul className="mt-5 flex flex-col gap-4">{group.items.map((item) => <li key={item} className="text-sm text-muted-foreground">{item}</li>)}</ul></div>)}</div></div></section>
 }

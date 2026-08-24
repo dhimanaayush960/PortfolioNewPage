@@ -1,54 +1,5 @@
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react'
+
 export default function Footer() {
-  return (
-    <footer className="bg-black text-white py-12 px-4 md:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div className="border-4 border-white bg-black p-6">
-            <h3 className="text-2xl font-black uppercase mb-2">Aayush</h3>
-            <p className="text-sm text-gray-300">Full-Stack Developer & UI/UX Designer</p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="border-4 border-white bg-black p-6">
-            <h4 className="text-sm font-black uppercase mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#hero" className="hover:underline">Home</a></li>
-              <li><a href="#projects" className="hover:underline">Projects</a></li>
-              <li><a href="#skills" className="hover:underline">Skills</a></li>
-              <li><a href="#contact" className="hover:underline">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div className="border-4 border-white bg-black p-6">
-            <h4 className="text-sm font-black uppercase mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="mailto:aayushdhiman8989@gmail.com" className="hover:underline">Email</a></li>
-              <li><a href="tel:+917817901273" className="hover:underline">Phone</a></li>
-              <li><a href="#" className="hover:underline">LinkedIn</a></li>
-              <li><a href="#" className="hover:underline">GitHub</a></li>
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div className="border-4 border-white bg-black p-6">
-            <h4 className="text-sm font-black uppercase mb-4">Follow</h4>
-            <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 border-2 border-white flex items-center justify-center hover:bg-white hover:text-black">G</a>
-              <a href="#" className="w-10 h-10 border-2 border-white flex items-center justify-center hover:bg-white hover:text-black">L</a>
-              <a href="#" className="w-10 h-10 border-2 border-white flex items-center justify-center hover:bg-white hover:text-black">T</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t-4 border-white pt-8">
-          <p className="text-center text-sm text-gray-400">
-            © 2025 Aayush Dhiman. All rights reserved. Crafted with code and creativity.
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer id="contact" className="bg-primary text-primary-foreground"><div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28"><div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end"><div><p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">Next conversation / 05</p><h2 className="mt-5 max-w-3xl text-balance font-serif text-6xl leading-[0.9] tracking-[-0.05em] md:text-8xl">Have a question<br />worth <em className="text-accent">exploring?</em></h2></div><a href="mailto:aayushdhiman8989@gmail.com" className="inline-flex items-center gap-3 rounded-full bg-accent px-6 py-3 font-mono text-xs uppercase tracking-[0.14em] text-accent-foreground transition-transform hover:-translate-y-1">Email me <ArrowUpRight className="size-4" /></a></div><div className="mt-20 flex flex-col justify-between gap-8 border-t border-primary-foreground/20 pt-6 font-mono text-xs uppercase tracking-[0.14em] text-primary-foreground/60 md:flex-row"><p>© 2026 Aayush Dhiman</p><div className="flex gap-6"><a href="https://github.com/dhimanaayush960" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent"><Github className="size-4" /> GitHub</a><a href="https://www.linkedin.com/in/aayush-dhiman-154382352/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent"><Linkedin className="size-4" /> LinkedIn</a><a href="mailto:aayushdhiman8989@gmail.com" className="flex items-center gap-2 hover:text-accent"><Mail className="size-4" /> Email</a></div></div></div></footer>
 }

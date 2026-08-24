@@ -1,108 +1,41 @@
+import { ArrowDownRight, ArrowUpRight, BarChart3, Mail, MapPin } from 'lucide-react'
+
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-[#f5f3f0] via-[#a8e6d9] to-[#d9c8ff] flex items-center justify-center px-4 md:px-8">
-      <div className="w-full max-w-5xl">
-        {/* Main content box */}
-        <div className="border-4 border-black bg-white shadow-[8px_8px_0px_rgba(26,26,26,0.8)] p-8 md:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Text content */}
-            <div className="space-y-6">
-              <div>
-                <div className="text-sm font-bold uppercase tracking-widest text-black mb-2">
-                  Welcome to My Portfolio
-                </div>
-                <h1 className="text-5xl md:text-6xl font-black uppercase leading-tight text-black">
-                  Aayush Dhiman
-                </h1>
-              </div>
-              
-              <div className="space-y-3">
-                <p className="text-lg font-bold uppercase text-black">Full-Stack Developer</p>
-                <p className="text-sm font-medium text-gray-700 leading-relaxed">
-                  Crafting scalable digital products with React, Node.js, and modern web technologies. Passionate about UI/UX design and building user-focused applications.
-                </p>
-              </div>
+    <section id="hero" className="relative overflow-hidden border-b border-border">
+      <div className="mx-auto max-w-7xl px-6 pb-20 pt-6 lg:px-10 lg:pb-28">
+        <nav className="flex items-center justify-between border-b border-border py-5" aria-label="Main navigation">
+          <a href="#hero" className="font-mono text-sm font-semibold tracking-tight text-primary">AD<span className="text-accent">/</span>26</a>
+          <div className="hidden items-center gap-8 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground md:flex">
+            <a href="#work" className="transition-colors hover:text-accent">Selected work</a>
+            <a href="#about" className="transition-colors hover:text-accent">About</a>
+            <a href="#contact" className="transition-colors hover:text-accent">Contact</a>
+          </div>
+          <a href="mailto:aayushdhiman8989@gmail.com" className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] text-accent"><Mail className="size-4" /> Let&apos;s talk</a>
+        </nav>
 
-              {/* Contact info boxes */}
-              <div className="grid grid-cols-1 gap-3 pt-4">
-                <div className="border-4 border-black bg-[#a8e6d9] p-3">
-                  <div className="text-xs font-bold uppercase mb-1">Email</div>
-                  <a href="mailto:aayushdhiman8989@gmail.com" className="text-xs font-bold text-black hover:underline break-all">
-                    aayushdhiman8989@gmail.com
-                  </a>
-                </div>
-                <div className="border-4 border-black bg-[#ffd670] p-3">
-                  <div className="text-xs font-bold uppercase mb-1">Phone</div>
-                  <a href="tel:+917817901273" className="text-sm font-bold text-black hover:underline">
-                    +91-7817901273
-                  </a>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex gap-4 pt-4 flex-wrap">
-                <a 
-                  href="#projects" 
-                  className="px-6 py-3 font-bold uppercase text-sm border-4 border-black bg-black text-white transition-all active:translate-x-1 active:translate-y-1 cursor-pointer shadow-[4px_4px_0px_rgba(26,26,26,0.8)] hover:bg-gray-800"
-                >
-                  View Work
-                </a>
-                <a 
-                  href="mailto:aayushdhiman8989@gmail.com"
-                  className="px-6 py-3 font-bold uppercase text-sm border-4 border-black bg-[#ffd670] text-black transition-all active:translate-x-1 active:translate-y-1 cursor-pointer shadow-[4px_4px_0px_rgba(26,26,26,0.8)] hover:bg-yellow-400"
-                >
-                  Get In Touch
-                </a>
-              </div>
-
-              {/* Social Links */}
-              <div className="flex gap-4 pt-4">
-                <a 
-                  href="https://github.com/dhimanaayush960" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="border-4 border-black bg-white px-4 py-2 font-bold uppercase text-sm transition-all hover:bg-black hover:text-white"
-                >
-                  GitHub
-                </a>
-                <a 
-                  href="https://www.linkedin.com/in/aayush-dhiman-154382352/?isSelfProfile=true" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="border-4 border-black bg-white px-4 py-2 font-bold uppercase text-sm transition-all hover:bg-black hover:text-white"
-                >
-                  LinkedIn
-                </a>
-              </div>
+        <div className="grid gap-14 pt-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:pt-28">
+          <div>
+            <div className="mb-8 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-accent"><span className="size-2 rounded-full bg-accent" /> Data &amp; business analyst</div>
+            <h1 className="max-w-4xl text-balance font-serif text-6xl leading-[0.92] tracking-[-0.05em] text-primary sm:text-7xl lg:text-[8.2rem]">Turning<br /><em className="text-accent">data</em> into<br />direction.</h1>
+            <p className="mt-10 max-w-xl text-pretty text-lg leading-8 text-muted-foreground">I&apos;m Aayush Dhiman — a curious analyst who makes complex business questions easier to act on through clean dashboards, thoughtful models, and clear storytelling.</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href="#work" className="inline-flex items-center gap-3 rounded-full bg-primary px-6 py-3 font-mono text-xs uppercase tracking-[0.14em] text-primary-foreground transition-transform hover:-translate-y-1">Explore my work <ArrowDownRight className="size-4" /></a>
+              <a href="mailto:aayushdhiman8989@gmail.com" className="inline-flex items-center gap-3 rounded-full border border-border px-6 py-3 font-mono text-xs uppercase tracking-[0.14em] text-primary transition-colors hover:border-accent hover:text-accent">Get in touch <ArrowUpRight className="size-4" /></a>
             </div>
+          </div>
 
-            {/* Visual element */}
-            <div className="hidden md:block space-y-4">
-              <div className="border-4 border-black bg-[#d9c8ff] p-8 shadow-[6px_6px_0px_rgba(26,26,26,0.6)]">
-                <div className="text-xs font-bold uppercase mb-4 text-black">Skills Stack</div>
-                <div className="grid grid-cols-2 gap-2">
-                  {['React', 'Node.js', 'React Native', 'JavaScript', 'MongoDB', 'MySQL'].map((skill) => (
-                    <div key={skill} className="border-2 border-black bg-white px-3 py-2">
-                      <span className="text-xs font-bold uppercase">{skill}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="border-4 border-black bg-[#ffb3ba] p-4 shadow-[4px_4px_0px_rgba(26,26,26,0.5)]">
-                  <div className="text-2xl font-black">3+</div>
-                  <div className="text-xs font-bold uppercase">Projects</div>
-                </div>
-                <div className="border-4 border-black bg-[#a8e6d9] p-4 shadow-[4px_4px_0px_rgba(26,26,26,0.5)]">
-                  <div className="text-2xl font-black">1+</div>
-                  <div className="text-xs font-bold uppercase">Years XP</div>
-                </div>
-              </div>
+          <div className="relative mx-auto w-full max-w-md lg:mb-3">
+            <div className="mb-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground"><span>Live profile / 01</span><span>Open to opportunities</span></div>
+            <div className="rounded-2xl border border-border bg-card p-5 shadow-[0_20px_80px_-40px_var(--shadow)]">
+              <div className="flex items-start justify-between"><div><p className="font-mono text-xs text-muted-foreground">CURRENT FOCUS</p><p className="mt-2 text-2xl font-semibold text-primary">Business intelligence</p></div><BarChart3 className="size-7 text-accent" /></div>
+              <div className="mt-10 flex h-36 items-end gap-2 border-b border-border pb-0">{[34, 48, 42, 66, 56, 78, 70, 94, 84, 100].map((height, index) => <div key={index} className="flex-1 rounded-t-sm bg-accent/80 transition-all hover:bg-accent" style={{ height: `${height}%` }} />)}</div>
+              <div className="mt-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground"><span>Insight velocity</span><span className="text-accent">+ 68.4%</span></div>
             </div>
+            <div className="mt-4 flex items-center gap-2 font-mono text-xs text-muted-foreground"><MapPin className="size-3 text-accent" /> Haridwar, India <span className="text-border">/</span> IST</div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
