@@ -2,27 +2,27 @@
 @import 'tw-animate-css';
 
 :root {
-  --background: #f3f6f5;
-  --foreground: #102326;
-  --card: #fbfdfc;
-  --card-foreground: #102326;
-  --popover: #fbfdfc;
-  --popover-foreground: #102326;
-  --primary: #102326;
-  --primary-foreground: #f3f6f5;
-  --secondary: #b7ded7;
-  --secondary-foreground: #102326;
-  --muted: #dce7e4;
-  --muted-foreground: #60716f;
-  --accent: #efaa4b;
-  --accent-foreground: #102326;
-  --destructive: #c95757;
-  --destructive-foreground: #ffffff;
-  --border: #cbd8d5;
-  --input: #fbfdfc;
-  --ring: #efaa4b;
-  --radius: 1rem;
-  --shadow: #9aafaa;
+  --background: #f7f4ed;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #111111;
+  --primary-foreground: #ffffff;
+  --secondary: #b9e6d3;
+  --secondary-foreground: #111111;
+  --muted: #d9d0ff;
+  --muted-foreground: #4a4742;
+  --accent: #f4d35e;
+  --accent-foreground: #111111;
+  --destructive: #f28f8f;
+  --destructive-foreground: #111111;
+  --border: #111111;
+  --input: #ffffff;
+  --ring: #111111;
+  --radius: 0rem;
+  --shadow: #111111;
 }
 
 @theme inline {
@@ -40,4 +40,9 @@
   a:focus-visible { @apply rounded-sm outline-2 outline-offset-4 outline-accent; }
 }
 
-body { background-image: linear-gradient(to right, rgba(16,35,38,0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(16,35,38,0.035) 1px, transparent 1px); background-size: 48px 48px; }
+body { background: var(--background); }
+
+.neo-shadow { box-shadow: 8px 8px 0 var(--shadow); }
+.neo-shadow-sm { box-shadow: 5px 5px 0 var(--shadow); }
+.neo-border { border: 3px solid var(--border); }
+@media (max-width: 640px) { .neo-shadow { box-shadow: 5px 5px 0 var(--shadow); } }
